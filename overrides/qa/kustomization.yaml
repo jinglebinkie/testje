@@ -8,6 +8,6 @@ replacements:
     targets:
       - select:
           kind: Deployment
-          name: nginx
+          name: nginx-qa
         fieldPaths:
-          - spec.template.spec.containers.name-nginx.image
+          - spec.template.spec.containers.name=nginx.image
