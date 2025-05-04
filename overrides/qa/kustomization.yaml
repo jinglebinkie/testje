@@ -1,13 +1,6 @@
 resources:
-  - ../../base
+  - ../../base/qa
 
-replacements:
-  - source:
-      path: image-replace.yaml
-      fieldPath: spec.template.spec.containers.name=nginx.image
-    targets:
-      - select:
-          kind: Deployment
-          name: nginx-qa
-        fieldPaths:
-          - spec.template.spec.containers.name=nginx.image
+images:
+  - name: nginx
+    newTag: 1.27.5

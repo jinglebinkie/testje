@@ -1,5 +1,5 @@
 resources:
-  - ../../base
+  - ../../base/prod
 
 patches:
   - path: ram-patch.yaml
