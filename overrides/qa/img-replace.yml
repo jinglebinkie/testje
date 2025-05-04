@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dummy
+spec:
+  template:
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:2.0.0

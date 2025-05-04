@@ -1,0 +1,13 @@
+resources:
+  - ../../base
+
+replacements:
+  - source:
+      path: image-replace.yaml
+      fieldPath: spec.template.spec.containers.name=nginx.image
+    targets:
+      - select:
+          kind: Deployment
+          name: nginx
+        fieldPaths:
+          - spec.template.spec.containers.name-nginx.image

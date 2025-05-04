@@ -1,0 +1,8 @@
+resources:
+  - ../../base
+
+patches:
+  - path: ram-patch.yaml
+    target:
+      kind: Deployment
+      name: nginx
