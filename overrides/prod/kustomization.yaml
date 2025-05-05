@@ -6,3 +6,7 @@ patches:
     target:
       kind: Deployment
       name: nginx-prod
+
+patchesStrategicMerge:
+  - replicas.yaml
+  - spread.yaml
