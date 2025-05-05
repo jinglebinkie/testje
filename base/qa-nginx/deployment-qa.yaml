@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment-qa
-  namespace: testje
+  namespace: testje-qa
 spec:
   selector:
     matchLabels:
