@@ -6,4 +6,8 @@ patches:
     target:
       kind: Deployment
       name: nginx-prod
+  - target:
+      kind: Deployment
+      name: nginx-prod
+    path: replicas.yaml
 
