@@ -1,7 +1,21 @@
 resources:
-  - ../../base/qa
+- ../../base/qa
 
 images:
-  - name: nginx
-    newTag: 1.27.5
+- name: nginx
+  newTag: 1.27.5
 
+# apiVersion: kustomize.config.k8s.io/v1beta1
+# kind: Kustomization
+# patches:
+# - patch: spread.yaml
+
+patches:
+  - target:
+      kind: Deployment
+      name: nginx-deployment-qa
+    path: replicas.yaml
+  - target: 
+      kind: Deployment
+      name: nginx-deployment-qa
+    path: spread.yaml
